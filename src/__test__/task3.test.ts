@@ -1,5 +1,6 @@
 import { UserProfile } from '../main'
 import { code } from './prepareTestEnvironment'
+import { describe, test, expect } from 'vitest'
 
 describe('UserProfile namespace', () => {
   test('createProfile creates a profile with given name and email', () => {
