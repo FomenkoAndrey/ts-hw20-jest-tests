@@ -1,13 +1,14 @@
 import { Calculator } from '../main'
 import { code } from './prepareTestEnvironment'
+import { describe, test, expect, beforeEach, afterEach, vi } from 'vitest'
 
 describe('Calculator with LogMethodCalls decorator', () => {
   let calculator: Calculator
-  let logSpy: jest.SpyInstance
+  let logSpy: any
 
   beforeEach(() => {
     calculator = new Calculator()
-    logSpy = jest.spyOn(console, 'log').mockImplementation()
+    logSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
   })
 
   afterEach(() => {

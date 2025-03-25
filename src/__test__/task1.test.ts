@@ -1,5 +1,6 @@
 import { code } from './prepareTestEnvironment'
 import { createPerson } from '../main'
+import { describe, test, expect } from 'vitest'
 
 describe('createPerson function', () => {
   test('should return a Person object with correct properties', () => {
